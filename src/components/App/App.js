@@ -4,13 +4,12 @@ import FeedbackOptions from "../Feedback/FeedbackOptions ";
 import Statistics from "../Statistics/Statistics";
 import Notification from "../Notification/Notification";
 
-export default function App() {
+function App() {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
   const handleIncrement = (e) => {
-    console.log(e.target.name);
     switch (e.target.name) {
       case "good":
         setGood((prevState) => prevState + 1);
@@ -58,3 +57,4 @@ export default function App() {
     </section>
   );
 }
+export default App;

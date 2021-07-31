@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "./FeedbackOptions.module.css";
 
-const FeedbackOptions = ({ onIncrement, options }) => {
+function FeedbackOptions({ onIncrement, options }) {
   return (
     <ul className={styles.feedbackButtons}>
       {options.map((option) => (
@@ -18,10 +18,11 @@ const FeedbackOptions = ({ onIncrement, options }) => {
       ))}
     </ul>
   );
-};
+}
 
 FeedbackOptions.propTypes = {
   onIncrement: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
+
 export default FeedbackOptions;
